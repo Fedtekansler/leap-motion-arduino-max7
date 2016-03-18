@@ -24,7 +24,6 @@ var sp = new SerialPort("/dev/cu.usbmodem1411", {
 * GLOBAL VARIABLES
 *
 */
-
 var first = 1; // Make sure the Leap allowed atleast one gesture.
 var activated = false; // The Leap  
 var handEnterTime = new Date().getTime(); // The time the hand enters the field of the Leap.
@@ -61,7 +60,7 @@ var controller = Leap.loop({enableGestures: true}, function(frame){
 									activated = false;
 								}  
 							}
-						// Swipe Direction: Left - The as above just left-going direction. 	
+						// Swipe Direction: Left - The same as above just left-going direction. 	
 						} else {
 							if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
 								var now = new Date().getTime();

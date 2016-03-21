@@ -15,7 +15,7 @@ var controller = new Leap.Controller();
 */
 var serialport = require("serialport");
 var SerialPort = serialport.SerialPort; // localize object constructor
-var sp = new SerialPort("/dev/cu.usbmodem1411", {
+var sp = new SerialPort("/dev/cu.usbmodem1421", {
   baudrate: 9600
 });
 

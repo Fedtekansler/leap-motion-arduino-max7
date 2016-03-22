@@ -15,9 +15,13 @@ var controller = new Leap.Controller();
 */
 var serialport = require("serialport");
 var SerialPort = serialport.SerialPort; // localize object constructor
-var sp = new SerialPort("/dev/cu.usbmodem1421", {
+var sp = new SerialPort("/dev/cu.usbmodem1411", {
   baudrate: 9600
 });
+
+// IMPORTS
+var max = require('./max.js');
+var led = require('./led.js');
 
 /*
 *
@@ -51,25 +55,14 @@ var controller = Leap.loop({enableGestures: true}, function(frame){
 				        if (frame.gestures[0].direction[0] > 0){
 					        // Avoid catching too many gestures on top of each other.
 					        if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
-								// Allow the gesture to activate LED if first time or under 5 seconds since last gesture.
-								var now = new Date().getTime(); 
-								if ((now - ledChangeTime) < 5000 || first) {
-								    console.log("Swipe Gesture Right");
-									setLED("right");
-								} else {
-									activated = false;
-								}  
+								console.log("Swipe Gesture Right");
+					        	led.changeRight(ledChangeTime, first);
 							}
 						// Swipe Direction: Left - The same as above just left-going direction. 	
 						} else {
 							if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
-								var now = new Date().getTime();
-								if ((now - ledChangeTime) < 5000 || first) {
-									console.log("Swipe Gesture Left");
-									setLED("left");
-								} else {
-									activated = false;
-								}   	
+								console.log("Swipe Gesture Left");			
+								led.changeLeft(ledChangeTime, first);   	
 							}			
 						}
 						lastGestureTracked = new Date().getTime();
@@ -102,7 +95,7 @@ sp.on('data', function(data) {
 * - tell the Arduino which color to turn on. 
 *
 */
-function setLED(direction) {
+exports.setLED = function(direction) {
 
 	if (direction == "right") {
 		if (first == 1) {
@@ -143,12 +136,15 @@ function setLED(direction) {
 	}
 }
 
+exports.setActivated = function(state) {
+	activated = state;
+}
+
 /*
 *
 * LEAP SETUP
 *
 */
-
 controller.on('ready', function() {
 	    console.log("ready");
 });

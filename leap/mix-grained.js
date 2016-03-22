@@ -35,6 +35,8 @@ var changeTime = new Date().getTime(); // The time a value last was changed.
 var lastGestureTracked = new Date().getTime(); // The time a gesture was last tracked.
 var index = 0;  // The choice is determined with an index of possible outputs.
 
+var interaction = 0; 
+
 /*
 *
 * GESTURE CONTROLLER
@@ -56,15 +58,21 @@ var controller = Leap.loop({enableGestures: true}, function(frame){
 					        // Avoid catching too many gestures on top of each other.
 					        if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
 								console.log("Swipe Gesture Right");
-					        	//led.changeRight(changeTime, first);
-					        	max.changeForwards(changeTime);
+					        	if (interaction == 1) {
+					        		led.changeRight(changeTime, first);
+					        	} else if (interaction == 2) {
+					        		max.changeForwards(changeTime);
+					        	}					        						     
 							}
 						// Swipe Direction: Left - The same as above just left-going direction. 	
 						} else {
 							if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
 								console.log("Swipe Gesture Left");			
-								//led.changeLeft(changeTime, first);
-								max.changeBackwards(changeTime);   	
+								if (interaction == 1) { 
+									led.changeLeft(changeTime, first);
+								} else if (interaction == 2) {
+									max.changeBackwards(changeTime); 	
+								} 	
 							}			
 						}
 						lastGestureTracked = new Date().getTime();
@@ -85,9 +93,13 @@ sp.on('data', function(data) {
 	var value = data.toString('utf8');
 
 	if (value == 'A') {
-		console.log("Activated set");
     	activated = true;
-    	changeTime = new Date().getTime();		
+    	changeTime = new Date().getTime();	
+    	interaction++;
+    	if (interaction == 3) {
+    		interaction = 1;
+    	}	
+    	console.log("Activated set with interaction " + interaction);
 	}
 });
 
@@ -140,6 +152,7 @@ exports.setLED = function(direction) {
 
 exports.setActivated = function(state) {
 	activated = state;
+	interaction = 0;
 }
 
 exports.setChangeTime = function(time) {

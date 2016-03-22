@@ -3,7 +3,7 @@ var main = require('./mix-grained.js');
 exports.changeLeft = function(time, first) {
 	var now = new Date().getTime();
 	if ((now - time) < 5000 || first) {
-		main.setLED("right");
+		main.setLED("left");
 	} else {
 		main.setActivated(false);
 	}  	
@@ -12,8 +12,8 @@ exports.changeLeft = function(time, first) {
 exports.changeRight = function(time, first) {
 	var now = new Date().getTime();
 	if ((now - time) < 5000 || first) {
-		main.setLED("left");
+		main.setLED("right");
 	} else {
-		main.setActivated = false;
+		main.setActivated(false);
 	}
 }

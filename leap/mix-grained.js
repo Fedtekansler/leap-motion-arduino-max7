@@ -31,7 +31,7 @@ var led = require('./led.js');
 var first = 1; // Make sure the Leap allowed atleast one gesture.
 var activated = false; // The Leap  
 var handEnterTime = new Date().getTime(); // The time the hand enters the field of the Leap.
-var ledChangeTime = new Date().getTime(); // The time the LED last changed.
+var changeTime = new Date().getTime(); // The time a value last was changed.
 var lastGestureTracked = new Date().getTime(); // The time a gesture was last tracked.
 var index = 0;  // The choice is determined with an index of possible outputs.
 
@@ -56,13 +56,15 @@ var controller = Leap.loop({enableGestures: true}, function(frame){
 					        // Avoid catching too many gestures on top of each other.
 					        if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
 								console.log("Swipe Gesture Right");
-					        	led.changeRight(ledChangeTime, first);
+					        	//led.changeRight(changeTime, first);
+					        	max.changeForwards(changeTime);
 							}
 						// Swipe Direction: Left - The same as above just left-going direction. 	
 						} else {
 							if ((new Date().getTime() - lastGestureTracked) > 400 && (new Date().getTime() - handEnterTime) > 100) {	
 								console.log("Swipe Gesture Left");			
-								led.changeLeft(ledChangeTime, first);   	
+								//led.changeLeft(changeTime, first);
+								max.changeBackwards(changeTime);   	
 							}			
 						}
 						lastGestureTracked = new Date().getTime();
@@ -85,7 +87,7 @@ sp.on('data', function(data) {
 	if (value == 'A') {
 		console.log("Activated set");
     	activated = true;
-    	ledChangeTime = new Date().getTime();		
+    	changeTime = new Date().getTime();		
 	}
 });
 
@@ -124,20 +126,24 @@ exports.setLED = function(direction) {
 	if (index == 0) {
 		// RED LED ON
 		sp.write('RED' + '\n');
-		ledChangeTime = new Date().getTime();
+		changeTime = new Date().getTime();
 	} 	else if (index == 1) {
 		// BLUE LED ON
 		sp.write('BLUE' + '\n');
-		ledChangeTime = new Date().getTime();
+		changeTime = new Date().getTime();
 	} else if (index == 2) {
 		// GREEN LED ON
 		sp.write('GREEN' + '\n');
-		ledChangeTime = new Date().getTime();
+		changeTime = new Date().getTime();
 	}
 }
 
 exports.setActivated = function(state) {
 	activated = state;
+}
+
+exports.setChangeTime = function(time) {
+	changeTime = time;
 }
 
 /*

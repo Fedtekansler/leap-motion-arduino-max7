@@ -36,6 +36,8 @@ var lastGestureTracked = new Date().getTime(); // The time a gesture was last tr
 var index = 0;  // The choice is determined with an index of possible outputs.
 
 var interaction = 0; 
+var interaction_timeout;
+var this_ = this;
 
 /*
 *
@@ -93,11 +95,20 @@ sp.on('data', function(data) {
 	var value = data.toString('utf8');
 
 	if (value == 'A') {
+    	this_.clear();
     	activated = true;
     	changeTime = new Date().getTime();	
     	interaction++;
     	if (interaction == 3) {
     		interaction = 1;
+    	}
+
+    	if (interaction == 1) {
+    		sp.write('LIGHTS' + '\n');
+    		this_.startTimeout();
+    	}
+    	if (interaction == 2) {
+    		sp.write('MUSIC' + '\n');
     	}	
     	console.log("Activated set with interaction " + interaction);
 	}
@@ -148,6 +159,8 @@ exports.setLED = function(direction) {
 		sp.write('GREEN' + '\n');
 		changeTime = new Date().getTime();
 	}
+	this_.clear();
+	this_.startTimeout();
 }
 
 exports.setActivated = function(state) {
@@ -158,6 +171,17 @@ exports.setActivated = function(state) {
 exports.setChangeTime = function(time) {
 	changeTime = time;
 }
+
+exports.startTimeout = function() {
+	interaction_timeout = setTimeout(function() {
+		activated = false;
+		sp.write('NOTHING' + '\n');
+	}, 5000);
+}
+
+exports.clear = function() {
+	clearTimeout(interaction_timeout);
+} 
 
 /*
 *

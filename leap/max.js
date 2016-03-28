@@ -46,4 +46,7 @@ function sendSocket(song) {
 	client.on('close', function() {
 	  //console.log('Output is: ' + song);
 	});	
+
+	main.clear();
+	main.startTimeout();
 }

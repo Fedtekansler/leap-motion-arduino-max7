@@ -29,7 +29,7 @@ void setup(void) {
 void loop(void) {
   // ZONE 1
   fsrReading = analogRead(fsrAnalogPin);
-  if (fsrReading > first) {
+  if (fsrReading > first && fsrReading < second) {
     Serial.print(1);
     Serial.print(1);
   } else if (fsrReading > second) {
@@ -39,7 +39,7 @@ void loop(void) {
   
   // ZONE 2
   fsrReading2 = analogRead(fsrAnalogPin2);
-  if (fsrReading2 > first) {
+  if (fsrReading2 > first && fsrReading2 < second) {
     Serial.print(2);
     Serial.print(1);
   } else if (fsrReading2 > second) {
@@ -49,7 +49,7 @@ void loop(void) {
   
   // ZONE 3
   fsrReading3 = analogRead(fsrAnalogPin3);
-  if (fsrReading3 > first) {
+  if (fsrReading3 > first && fsrReading2 < second) {
     Serial.print(3);
     Serial.print(1);
   } else if (fsrReading3 > second) {
@@ -59,7 +59,7 @@ void loop(void) {
   
   // ZONE 4
   fsrReading4 = analogRead(fsrAnalogPin4);
-  if (fsrReading4 > first) {
+  if (fsrReading4 > first && fsrReading2 < second) {
     Serial.print(4);
     Serial.print(1);
   } else if (fsrReading4 > second) {

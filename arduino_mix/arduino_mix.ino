@@ -49,7 +49,7 @@ void loop(void) {
   
   // ZONE 3
   fsrReading3 = analogRead(fsrAnalogPin3);
-  if (fsrReading3 > first && fsrReading2 < second) {
+  if (fsrReading3 > first && fsrReading3 < second) {
     Serial.print(3);
     Serial.print(1);
   } else if (fsrReading3 > second) {
@@ -59,7 +59,7 @@ void loop(void) {
   
   // ZONE 4
   fsrReading4 = analogRead(fsrAnalogPin4);
-  if (fsrReading4 > first && fsrReading2 < second) {
+  if (fsrReading4 > first && fsrReading4 < second) {
     Serial.print(4);
     Serial.print(1);
   } else if (fsrReading4 > second) {

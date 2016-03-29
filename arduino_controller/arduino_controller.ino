@@ -10,9 +10,7 @@ int fsrReading3;      // the analog reading from the FSR resistor divider
 int fsrAnalogPin4 = 3; // FSR is connected to analog 0
 int fsrReading4;      // the analog reading from the FSR resistor divider
 
-int redPin = 11;
-int greenPin = 10;
-int bluePin = 9;
+int myPins[] = {1, 2, 3, 4, 5, 6, 7, 8};
 
 String input; 
 const int first = 50;
@@ -29,59 +27,36 @@ void setup(void) {
 void loop(void) {
   // ZONE 1
   fsrReading = analogRead(fsrAnalogPin);
-  if (fsrReading > first) {
-    Serial.print(1);
+  if (fsrReading > first && fsrReading < second) {
     Serial.print(1);
   } else if (fsrReading > second) {
-    Serial.print(1);
     Serial.print(2);
   }
   
   // ZONE 2
   fsrReading2 = analogRead(fsrAnalogPin2);
-  if (fsrReading2 > first) {
-    Serial.print(2);
-    Serial.print(1);
+  if (fsrReading2 > first && fsrReading2 < second) {
+    Serial.print(3);
   } else if (fsrReading2 > second) {
-    Serial.print(2);
-    Serial.print(2);
+    Serial.print(4);
   }
   
   // ZONE 3
   fsrReading3 = analogRead(fsrAnalogPin3);
-  if (fsrReading3 > first) {
-    Serial.print(3);
-    Serial.print(1);
+  if (fsrReading3 > first && fsrReading3 < second) {
+    Serial.print(5);
   } else if (fsrReading3 > second) {
-    Serial.print(3);
-    Serial.print(2);
+    Serial.print(6);
   }
   
   // ZONE 4
   fsrReading4 = analogRead(fsrAnalogPin4);
-  if (fsrReading4 > first) {
-    Serial.print(4);
-    Serial.print(1);
+  if (fsrReading4 > first && fsrReading4 < second) {
+    Serial.print(7);
   } else if (fsrReading4 > second) {
-    Serial.print(4);
-    Serial.print(2);
+    Serial.print(8);
   }
   
-  if (Serial.available() > 0) {
-      input = Serial.readStringUntil('\n');
-      if (input == "RED") {
-        setColor(255, 0, 0); 
-      } else if (input == "BLUE") {
-        setColor(0, 0, 255);
-      } else if (input == "GREEN") {
-        setColor(0, 255, 0);
-      }
-  }
   delay(1000);
 } 
 
-void setColor(int red, int green, int blue) {
-  analogWrite(redPin, red);
-  analogWrite(greenPin, green);
-  analogWrite(bluePin, blue);  
-}

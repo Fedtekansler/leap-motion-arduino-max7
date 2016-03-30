@@ -15,15 +15,12 @@ int greenPin = 10;
 int bluePin = 9;
 
 String input; 
-const int first = 50;
-const int second = 500;
+const int first = 150;
+const int second = 250;
  
 void setup(void) {
   // We'll send debugging information via the Serial monitor
   Serial.begin(9600); 
-  for (int pin = 1; pin < 5; pin++) {
-    pinMode(pin, OUTPUT);
-  } 
 }
  
 void loop(void) {

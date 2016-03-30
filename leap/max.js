@@ -51,6 +51,6 @@ function sendSocket(song) {
 	});
 
 	client.on('close', function() {
-	  //console.log('Output is: ' + song);
+	  console.log('Output is: ' + song);
 	});	
 }

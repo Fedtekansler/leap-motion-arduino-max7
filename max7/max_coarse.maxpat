@@ -62,36 +62,300 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 156.0, 606.0, 45.0, 45.0 ],
+					"patching_rect" : [ 105.0, 833.0, 45.0, 45.0 ],
 					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"clipheight" : 91.0,
+					"clipheight" : 24.75,
 					"data" : 					{
 						"clips" : [ 							{
-								"filename" : "/Users/peterkrogshede/Music/air_raid.wav",
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Guitar/Guitar 1.wav",
 								"filekind" : "audiofile",
 								"loop" : 0,
 								"content_state" : 								{
-									"play" : [ 0 ],
-									"pitchshift" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"timestretch" : [ 0 ],
-									"formant" : [ 1.0 ],
 									"slurtime" : [ 0.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"basictuning" : [ 440 ],
-									"followglobaltempo" : [ 0 ],
-									"pitchcorrection" : [ 0 ],
 									"formantcorrection" : [ 0 ],
-									"mode" : [ "basic" ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
 									"pitchshiftcent" : [ 0 ],
-									"originaltempo" : [ 120.0 ],
 									"speed" : [ 1.0 ],
-									"originallengthms" : [ 0.0 ]
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Guitar/Guitar 2.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Guitar/Guitar 3.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Klaver/Klaver 1.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Klaver/Klaver 2.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Klaver/Klaver 3.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Tromme/Tromme 1.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Tromme/Tromme 2.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Tromme/Tromme 3.aif",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Trompet/Trompet 1.mp3",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Trompet/Trompet 2.mp3",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+, 							{
+								"filename" : "/Users/peterkrogshede/Desktop/Soundscapes/Coarse/Trompet/Trompet 3.wav",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"timestretch" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"play" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchshiftcent" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"basictuning" : [ 440 ],
+									"originaltempo" : [ 120.0 ]
 								}
 
 							}
@@ -103,7 +367,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"patching_rect" : [ 160.0, 488.0, 150.0, 92.0 ],
+					"patching_rect" : [ 163.0, 490.0, 252.0, 309.0 ],
 					"style" : ""
 				}
 
@@ -150,11 +414,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5::obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
-			"obj-5::obj-66" : [ "live.toggle[1]", "live.toggle", 0 ],
 			"obj-5::obj-1129" : [ "umenu", "umenu", 0 ],
 			"obj-5::obj-27" : [ "live.toggle[7]", "live.toggle", 0 ],
-			"obj-5::obj-28" : [ "live.toggle[8]", "live.toggle", 0 ]
+			"obj-5::obj-70" : [ "live.toggle[3]", "live.toggle", 0 ],
+			"obj-5::obj-28" : [ "live.toggle[8]", "live.toggle", 0 ],
+			"obj-5::obj-66" : [ "live.toggle[1]", "live.toggle", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
